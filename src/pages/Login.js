@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Form, FormControl, InputGroup, Row } from "react-bootstrap";
 import useAuth from "../hooks/useAuth.js";
 import { NavLink, useLocation, useHistory } from "react-router-dom";
+import googleLogo from "../assets/download.png";
 
 const Login = () => {
   const { AllContexts } = useAuth();
@@ -17,9 +18,7 @@ const Login = () => {
     error,
     setUser,
     setError,
-    signInWithGoogle,
-    signInWithGithub,
-    signInWithFacebook,
+    signInWithGoogle
   } = AllContexts;
 
   return (
@@ -102,22 +101,9 @@ const Login = () => {
               });
           }}
           className="btn"
-        >Google
+        ><img className='w-50' src={googleLogo} alt="" />
         </button>
-        <button
-          onClick={() => {
-            signInWithGithub()
-              .then((result) => {
-                setUser(result.user);
-                history.push(redirect);
-              })
-              .catch((err) => {
-                setError(err.message);
-              });
-          }}
-          className="btn"
-        >
-        </button>
+
       </div>
     </div>
   );

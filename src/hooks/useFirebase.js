@@ -12,6 +12,8 @@ import {
   sendPasswordResetEmail,
 } from "firebase/auth";
 import firebaseInitialization from "./../firebase/firebase.init.js";
+
+
 firebaseInitialization();
 
 // Providers
@@ -42,10 +44,10 @@ const useFirebase = () => {
 
   // Email sign in
   function signInWithEmail(e) {
-    e.preventDefault();
+    // e.preventDefault();
     return signInWithEmailAndPassword(auth, email, password);
   }
-  // set name and profile image url
+
   function setNameAndImage() {
     updateProfile(auth.currentUser, {
       displayName: name,
@@ -63,7 +65,6 @@ const useFirebase = () => {
     });
   }
 
-  // Get the currently signed-in user
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (signedInUser) => {
       if (signedInUser) {
@@ -76,7 +77,7 @@ const useFirebase = () => {
     return () => unsubscribe;
   }, []);
 
-  // sign out
+
   function logOut() {
     signOut(auth)
       .then((res) => {
@@ -87,7 +88,6 @@ const useFirebase = () => {
       });
   }
 
-  // reset password
   function passwordReset(e) {
     e.preventDefault();
     sendPasswordResetEmail(auth, email)
@@ -99,10 +99,10 @@ const useFirebase = () => {
       });
   }
 
-  // sign up with email password
-  function singUp(e) {
-    e.preventDefault();
 
+  function singUp(e) {
+    console.log(email, password);
+    e.preventDefault();
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         setNameAndImage();
@@ -112,21 +112,20 @@ const useFirebase = () => {
       .catch((err) => {
         setError(err.message);
       });
+
   }
-  // get name
   function getName(e) {
     setName(e?.target?.value);
   }
 
-  // get Email
   function getEmail(e) {
     setEmail(e?.target?.value);
   }
-  // Get password
+
   function getPassword(e) {
     setPassword(e?.target?.value);
   }
-  // Get photoUrl
+
   function getPhoto(e) {
     setPhoto(e?.target?.value);
   }

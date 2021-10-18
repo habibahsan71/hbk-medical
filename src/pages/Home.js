@@ -17,64 +17,41 @@ const Home = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3 className='text-dark'>Best Surgeons</h3>
+            <p className='text-dark fw-bold'>Best Board with world best surgeons to decide every important decision</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="./12.jpg"
+            src="./14.jpg"
             alt="Second slide"
           />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3 className='text-dark'>Best Cardiologist</h3>
+            <p className='text-dark fw-bold'>We Have the best Cardiologist from America. and we provide best treatment</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="./12.jpg"
+            src="./11.png"
             alt="Third slide"
           />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <h3 className='text-dark'>Best Facilities</h3>
+            <p className='text-dark fw-bold'>We Have the best facilities for a patient. and environment matter for patients</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-
-
-
-      <div>
-        <Container >
-          <div style={{ height: "90vh" }} className="d-flex justify-content-center align-items-center">
-            <div className="text-center my-5 py-5">
-              <h1 className="text-primary">Learn to be creative</h1>
-
-              <p className="my-4 text-white fs-5">
-                Learn exciting technologies from web development, design, game
-                development and more!
-              </p>
-              <NavLink
-                to="/courses"
-                className="rounded-pill btn btn-primary fs-5 py-2 px-4"
-              >
-                View Courses
-              </NavLink>
-            </div>
-          </div>
-        </Container>
-      </div>
 
       <div id="feature"
         className="py-5">
         <div className="text-center">
 
-          <h1>Our Services</h1>
+          <h1 >Our Services</h1>
           <p className="mb-0">
             We Provide Best Services around The country with best Success rate
           </p>
@@ -84,12 +61,23 @@ const Home = () => {
         <Container>
           <div className="my-3 d-flex flex-wrap justify-content-between">
             <Row>
-              {services.map((service) => (
+              {services.slice(0, 6)?.map((service) => (
                 <Service key={service.key} service={service} />
               ))}
             </Row>
           </div>
         </Container>
+        <div>
+          <Container >
+            <div style={{ height: "30vh" }} className="d-flex justify-content-center align-items-center">
+              <div className="text-center my-5 py-5">
+                <NavLink to="/courses" className="rounded-pill btn btn-primary fs-5 py-2 px-4">
+                  View All Services
+                </NavLink>
+              </div>
+            </div>
+          </Container>
+        </div>
       </div>
     </div>
   );

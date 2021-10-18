@@ -1,18 +1,19 @@
 import React from "react";
-import { Container, Nav, Navbar, NavDropdown, Badge } from "react-bootstrap";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import useAuth from "../../hooks/useAuth.js";
+import "./Header.css"
 
 const Header = () => {
     const { AllContexts } = useAuth();
     const { user, logOut } = AllContexts;
     const { displayName, photoURL, email } = user;
     return (
-        <div className="">
-            <Navbar bg="dark" variant="dark" expand="lg">
+        <div>
+            <Navbar className="nav-bar" bg="dark" variant="dark" expand="lg" >
                 <Container>
                     <Navbar.Brand as={NavLink} className="text-white d-flex align-items-center" to="/home">
-                        <img className="w-25" src="./logo192.png" alt="" />
+                        <img className="logo" src="./logo.png" alt="" />
                         <h3 className="title">HBK Medical Services</h3>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />

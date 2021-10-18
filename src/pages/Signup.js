@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 const Signup = () => {
   const { AllContexts } = useAuth();
 
-  const { getPhoto, getName, singUp, getEmail, getPassword, error } =
+  const { getName, singUp, getEmail, getPassword, error } =
     AllContexts;
 
   return (
@@ -63,24 +63,6 @@ const Signup = () => {
                   autoComplete="current-password"
                   id="password"
                   placeholder="Enter your password"
-                />
-              </InputGroup>
-            </Col>
-          </Row>
-          <Row>
-            <Col className="text-start">
-              <Form.Label htmlFor="name" visuallyHidden>
-                Your Profile photo URL
-              </Form.Label>
-              <InputGroup className="mb-2">
-
-                <FormControl
-                  required
-                  onBlur={getPhoto}
-                  type="text"
-                  autoComplete="current-text"
-                  id="photo"
-                  placeholder="Enter valid photo url"
                 />
               </InputGroup>
             </Col>

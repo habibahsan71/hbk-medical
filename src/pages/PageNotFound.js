@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const NotFound = () => {
   return (
-    <div className="d-flex justify-content-center align-items-center">
+    <div className="d-flex justify-content-center align-items-center p-5 mt-5">
       <div className="text-center my-5">
         <h1 style={{ fontSize: "100px", color: "red" }}>404</h1>
         <h4 className="text-white">OPPS! PAGE NOT FOUND</h4>

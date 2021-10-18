@@ -7,7 +7,7 @@ const Services = () => {
   const { services } = useAuth();
 
   return (
-    <div className="py-5">
+    <div className="py-5 mt-5">
       <div className="text-center text-dark">
 
         <h1> Our Provided Medical Services</h1>

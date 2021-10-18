@@ -40,9 +40,9 @@ function App() {
               <Contact></Contact>
             </PrivateRoute>
 
-            <Route exact path="/services">
+            <PrivateRoute exact path="/services">
               <Services></Services>
-            </Route>
+            </PrivateRoute>
 
             <Route path="/login">
               <Login></Login>
