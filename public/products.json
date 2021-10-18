@@ -1,0 +1,65 @@
+[
+  {
+    "key": 1,
+    "img": "https://i.ibb.co/gtcqQdq/1.jpg",
+    "title": "ACCIDENT & EMERGENCY",
+    "price": 2500,
+    "desc": "The Accident and Emergency Department of United Hospital is a 24-hour, full time section and it is the mirror of United Hospital."
+  },
+  {
+    "key": 2,
+    "img": "https://i.ibb.co/jM24fTx/2.jpg",
+    "title": "ANESTHESIOLOGY",
+    "price": 3500,
+    "desc": "The anesthesiologists on staff at United Hospital provide anesthesia services for inpatient and outpatient surgery as well as for non-surgical diagnostic"
+  },
+  {
+    "key": 3,
+    "img": "https://i.ibb.co/3vbw3Sm/3.jpg",
+    "title": "CANCER SURGERY (ONCOSURGERY)",
+    "price": 2800,
+    "desc": "NeurosurgeonSwelling on back (vertebral column), back pain, difficulty in walking or weight lifting, sitting straight, radiating pain in shoulder or hand or finger or thigh or leg"
+  },
+  {
+    "key": 4,
+    "img": "https://i.ibb.co/Fq36kcv/4.jpg",
+    "title": "CARDIAC ANESTHESIA",
+    "price": 2100,
+    "desc": "Cardiac Anesthesia is a subspecialty anesthesiology devoted to the preoperative, intraoperative, and postoperative care of adult patients"
+  },
+  {
+    "key": 5,
+    "img": "https://i.ibb.co/gzhMVXX/5.jpg",
+    "title": "CARDIAC SURGERY",
+    "price": 2900,
+    "desc": "Big Data is now growing as an opportunity rather than a problem"
+  },
+  {
+    "key": 6,
+    "img": "https://i.ibb.co/mt84NkN/6.jpg",
+    "title": "CARDIOLOGY",
+    "price": 2520,
+    "desc": "United Hospital has the best cardiologists in Dhaka, Bangladesh providing specialized inpatient and outpatient heart care."
+  },
+  {
+    "key": 7,
+    "img": "https://i.ibb.co/Fq36kcv/4.jpg",
+    "title": "CARDIAC ANESTHESIA",
+    "price": 2100,
+    "desc": "Cardiac Anesthesia is a subspecialty anesthesiology devoted to the preoperative, intraoperative, and postoperative care of adult patients"
+  },
+  {
+    "key": 8,
+    "img": "https://i.ibb.co/gzhMVXX/5.jpg",
+    "title": "CARDIAC SURGERY",
+    "price": 2900,
+    "desc": "Big Data is now growing as an opportunity rather than a problem"
+  },
+  {
+    "key": 9,
+    "img": "https://i.ibb.co/mt84NkN/6.jpg",
+    "title": "CARDIOLOGY",
+    "price": 2520,
+    "desc": "United Hospital has the best cardiologists in Dhaka, Bangladesh providing specialized inpatient and outpatient heart care."
+  }
+]
