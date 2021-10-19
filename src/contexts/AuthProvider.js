@@ -5,7 +5,7 @@ import useServices from "../hooks/useServices.js";
 export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-  // hooks
+
   const AllContexts = useFirebase();
   const { services } = useServices();
 

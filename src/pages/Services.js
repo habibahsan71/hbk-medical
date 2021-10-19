@@ -10,7 +10,7 @@ const Services = () => {
     <div className="py-5 mt-5">
       <div className="text-center text-dark">
 
-        <h1> Our Provided Medical Services</h1>
+        <h1> Our Provided <span className='text-primary'>Medical</span> Services</h1>
 
         <p className="mb-0">
           We offer top and succesful medical support with 99% success rate.

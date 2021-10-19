@@ -30,25 +30,24 @@ const useFirebase = () => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(true);
 
-  // clear error
   useEffect(() => {
     setTimeout(() => {
       setError("");
     }, 5000);
   }, [error]);
 
-  // google sign in
-  function signInWithGoogle() {
+
+  const signInWithGoogle = () => {
     return signInWithPopup(auth, googleProvider);
   }
 
-  // Email sign in
-  function signInWithEmail(e) {
+
+  const signInWithEmail = () => {
     // e.preventDefault();
     return signInWithEmailAndPassword(auth, email, password);
   }
 
-  function setNameAndImage() {
+  const setNameAndImage = () => {
     updateProfile(auth.currentUser, {
       displayName: name,
       photoURL: photo,
@@ -59,7 +58,7 @@ const useFirebase = () => {
       });
   }
 
-  function emailVerify() {
+  const emailVerify = () => {
     sendEmailVerification(auth.currentUser).then(() => {
       alert(`An Verification mail has been set to ${email}`);
     });
@@ -78,7 +77,7 @@ const useFirebase = () => {
   }, []);
 
 
-  function logOut() {
+  const logOut = () => {
     signOut(auth)
       .then((res) => {
         setUser({});
@@ -88,7 +87,7 @@ const useFirebase = () => {
       });
   }
 
-  function passwordReset(e) {
+  const passwordReset = (e) => {
     e.preventDefault();
     sendPasswordResetEmail(auth, email)
       .then(() => {
@@ -100,11 +99,12 @@ const useFirebase = () => {
   }
 
 
-  function singUp(e) {
-    console.log(email, password);
+  const singUp = (e) => {
     e.preventDefault();
+    console.log(email, password);
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
+        setUser(result.user);
         setNameAndImage();
         emailVerify();
         alert("user has been created");
@@ -114,19 +114,19 @@ const useFirebase = () => {
       });
 
   }
-  function getName(e) {
+  const getName = (e) => {
     setName(e?.target?.value);
   }
 
-  function getEmail(e) {
+  const getEmail = (e) => {
     setEmail(e?.target?.value);
   }
 
-  function getPassword(e) {
+  const getPassword = (e) => {
     setPassword(e?.target?.value);
   }
 
-  function getPhoto(e) {
+  const getPhoto = (e) => {
     setPhoto(e?.target?.value);
   }
 

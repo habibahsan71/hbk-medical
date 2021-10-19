@@ -30,7 +30,7 @@ const Details = () => {
         </Container>
       ) : (
         <div className="my-5 py-1">
-          <h1 className="my-5 p-5 text-center">NO Course Found</h1>
+          <h1 className="my-5 p-5 text-center">NO Services Found</h1>
         </div>
       )}
     </div>

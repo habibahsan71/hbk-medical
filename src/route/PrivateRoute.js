@@ -2,7 +2,7 @@ import { Spinner } from "react-bootstrap";
 import { Route, Redirect } from "react-router-dom";
 import useAuth from "../hooks/useAuth.js";
 
-function PrivateRoute(props) {
+const PrivateRoute = (props) => {
   const { children, ...rest } = props;
 
   const { AllContexts } = useAuth();

@@ -3,10 +3,10 @@ import { Container, Row, Carousel } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import useAuth from "../hooks/useAuth.js";
 import Service from "../components/course/Service.js";
+import Other from "./Other.js";
 
 const Home = () => {
   const { services } = useAuth();
-  console.log(services);
   return (
     <div>
       <Carousel fade>
@@ -51,7 +51,7 @@ const Home = () => {
         className="py-5">
         <div className="text-center">
 
-          <h1 >Our Services</h1>
+          <h1 >Our <span className='text-primary'>Services</span></h1>
           <p className="mb-0">
             We Provide Best Services around The country with best Success rate
           </p>
@@ -67,18 +67,16 @@ const Home = () => {
             </Row>
           </div>
         </Container>
-        <div>
-          <Container >
-            <div style={{ height: "30vh" }} className="d-flex justify-content-center align-items-center">
-              <div className="text-center my-5 py-5">
-                <NavLink to="/courses" className="rounded-pill btn btn-primary fs-5 py-2 px-4">
-                  View All Services
-                </NavLink>
-              </div>
-            </div>
-          </Container>
-        </div>
+
+        <Container >
+          <div className="text-center">
+            <NavLink to="/services" className="rounded-pill btn btn-primary fs-5 py-2 px-4">
+              View All Services
+            </NavLink>
+          </div>
+        </Container>
       </div>
+      <Other></Other>
     </div>
   );
 };
