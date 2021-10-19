@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import useAuth from "../hooks/useAuth.js";
 import Service from "../components/course/Service.js";
 import Other from "./Other.js";
+import Specialist from "./Specialist.js";
 
 const Home = () => {
   const { services } = useAuth();
@@ -77,6 +78,7 @@ const Home = () => {
         </Container>
       </div>
       <Other></Other>
+      <Specialist></Specialist>
     </div>
   );
 };
