@@ -14,7 +14,7 @@ const Header = () => {
                 <Container>
                     <Navbar.Brand as={NavLink} className="text-white d-flex align-items-center" to="/home">
                         <img className="logo" src="./logo.png" alt="" />
-                        <h3 className="title">HBK Medical Services</h3>
+                        <h3 className="title"> <span className='text-primary fw-bold'>HBK</span> Medical Services</h3>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">

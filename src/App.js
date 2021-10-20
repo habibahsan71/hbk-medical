@@ -18,7 +18,7 @@ import PrivateRoute from "./route/PrivateRoute.js";
 
 function App() {
   return (
-    <div>
+    <>
       <AuthProvider>
         <Router>
           <Header> </Header>
@@ -67,7 +67,7 @@ function App() {
           <Footer></Footer>
         </Router>
       </AuthProvider>
-    </div>
+    </>
   );
 }
 
