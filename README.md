@@ -9,7 +9,7 @@ With Best Tecnology We Treat Our Patient And Make sure They have best treatment.
 
 Live Site Link:https://hbk-hospital.web.app/
 
-Technology we use to build this project:
+# Technology we use to build this project:
 
 - JSX
 - NODE.js
